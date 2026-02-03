@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/add_product.css">
+    <title>Add Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">asap</div>
+            <nav class="navigation">
+                <a href="/web-page" class="nav-link">Home</a>
+                <a href="/product" class="nav-link">Product</a>
+                <a href="/team-page" class="nav-link">Team</a>
+            </nav>
+            <div class="social-icons">
+                <nav class="nav">
+                    <a href="/search-page" class="nav-link"><img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/74d610171b49cc3b18b456fe06d02bff2a8f09126ee10249b3afcbc71e046e51?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                            alt="" class="social-icon" /></a>
+                    <a href="/task-bar" class="nav-link">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d8ac2af4fe98d3962e7216f1d3a4f909c949da16f51206d4e6f2839c71acdc86?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                            alt="" class="social-icon" />
+                    </a>
+                    <a href="#" class="nav-link"><img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f0501680077f26e72f80f48966516db3764b49ea97d0706b2943c6ac5ed015b?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                            alt="" class="social-icon-large" /></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="Add-product">
+        <div class="Add-product-header">
+            <h1>Add New Product</h1>
+        </div>
+
+        <div class="Add-img-container" id="productImagesContainer">
+            <!-- Images will be dynamically added here -->
+        </div>
+
+        <div class="Add-product-container">
+            <h4>PRODUCT INFORMATION</h4>
+
+            <div class="product-details">
+                <fieldset>
+                    <form action="http://localhost:8000/add-product" method="POST">
+                        <div class="Label">
+                            <label for="txtSKU">SKU:</label>
+                            <input type="text" id="txtSKU" name="txtSKU">
+
+                            <label for="txtProductname">Product Name:</label>
+                            <input type="text" id="txtProductname" name="txtProductname">
+
+                            <label for="txtBrand">Brand:</label>
+                            <input type="text" id="txtBrand" name="txtBrand">
+
+                            <label for="txtStatus">Status:</label>
+                            <input type="text" id="txtStatus" name="txtStatus">
+                        </div>
+
+
+
+                        <div class="Label">
+                            <label for="txtPrice">Price:</label>
+                            <input type="text" id="txtPrice" name="txtPrice">
+                        </div>
+
+                        <div class="option">
+                            Categories:
+                            <input type="radio" name="product-categories" value="Gaming Gear"> Gaming Gear
+                            <input type="radio" name="product-categories" value="SmartPhone"> SmartPhone
+                            <input type="radio" name="product-categories" value="Desktop"> Desktop
+                            <input type="radio" name="product-categories" value="Computer hardware"> Computer Hardware
+                            <input type="radio" name="product-categories" value="Accessories"> Accessories<br>
+                            <input type="radio" name="product-categories" value="Gaming Desktop"> Gaming Desktop<br>
+                        </div>
+
+                        <div class="Label">
+                            <label for="txtDescription">Description:</label>
+                            <textarea id="txtDescription" name="txtDescription" rows="9" cols="10"></textarea>
+                        </div>
+
+                        <div class="Label">
+                            <label for="txtAdditionalInfo">Additional Info:</label>
+                            <textarea id="txtAdditionalInfo" name="txtAdditionalInfo" rows="9" cols="10"></textarea>
+                        </div>
+
+                        <div class="Label">
+                            <label for="txtQuantity">Quantity:</label>
+                            <input type="text" id="txtQuantity" name="txtQuantity">
+                        </div>
+
+                        <div class="Label">
+                            <label for="txtImage1">Image 1 URL:</label>
+                            <input type="text" id="txtImage1" name="txtImage1">
+                        </div>
+                        <div class="Label">
+                            <label for="txtImage2">Image 2 URL:</label>
+                            <input type="text" id="txtImage2" name="txtImage2">
+                        </div>
+                        <div class="Label">
+                            <label for="txtImage3">Image 3 URL:</label>
+                            <input type="text" id="txtImage3" name="txtImage3">
+                        </div>
+                        <div class="Label">
+                            <label for="txtImage4">Image 4 URL:</label>
+                            <input type="text" id="txtImage4" name="txtImage4">
+                        </div>
+
+                    </form>
+                </fieldset>
+
+
+            </div>
+        </div>
+
+        <div class="botton-container">
+            <button type="reset" onclick="goToProductManagement()">CANCEL</button>
+            <button type="submit" onclick="saveProduct()">SAVE</button>
+        </div>
+    </main>
+
+    <script>
+        function goToProductManagement() {
+            window.location.href = 'http://localhost:3300/product-management';
+        }
+
+        function saveProduct() {
+            // Get product data from form fields
+            const prod_SKU = document.getElementById('txtSKU').value;
+            const prod_name = document.getElementById('txtProductname').value;
+            const prod_brand = document.getElementById('txtBrand').value;
+            const status = document.getElementById("txtStatus").value;
+            const prod_price = document.getElementById('txtPrice').value;
+            const prod_category = getSelectedCategory(); // Corrected function name
+            const prod_description = document.getElementById('txtDescription').value;
+            const prod_additional_info = document.getElementById('txtAdditionalInfo').value;
+            const prod_quantity = document.getElementById('txtQuantity').value;
+            const prod_image1 = document.getElementById('txtImage1').value;
+            const prod_image2 = document.getElementById('txtImage2').value;
+            const prod_image3 = document.getElementById('txtImage3').value;
+            const prod_image4 = document.getElementById('txtImage4').value;
+
+            // Create product object
+            const newProduct = {
+                prod_SKU,
+                status,
+                prod_image1,
+                prod_image2,
+                prod_image3,
+                prod_image4,
+                prod_name,
+                prod_brand,
+                prod_category,
+                prod_additional_info,
+                prod_description,
+                prod_price,
+                prod_quantity
+            };
+
+            // Send data to the server using fetch or XMLHttpRequest
+            fetch('http://localhost:8000/add-product', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ Product: newProduct }),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json(); // Parse JSON response
+                })
+                .then(data => {
+                    console.log(data); // Log the response from the server
+                    alert(data.alertMessage); // Display the alert message
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+        }
+
+        // Helper function to get selected category
+        function getSelectedCategory() {
+            const categories = document.getElementsByName('product-categories');
+            for (let i = 0; i < categories.length; i++) {
+                if (categories[i].checked) {
+                    return categories[i].value;
+                }
+            }
+            return null; // Return null if no category is selected
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

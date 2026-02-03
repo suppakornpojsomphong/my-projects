@@ -1,0 +1,217 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    top: 0;
+    left: 0;
+    background: white;
+    padding: 15px 25px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dde1e6;
+}
+
+.logo {
+    font: 500 24px/100% Poppins, sans-serif;
+    color: #000;
+    margin: auto 0;
+    padding-top: 7px;
+    align-self: stretch;
+    white-space: nowrap;
+    font-feature-settings: "clig" off, "liga" off;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: auto 0;
+    align-self: stretch;
+    font: 500 14px/24px Space Grotesk, sans-serif;
+    color: #6c7275;
+    white-space: nowrap;
+}
+
+.nav-link {
+    color: #141718;
+    font-feature-settings: "clig" off, "liga" off;
+    justify-content: center;
+    border: 0 solid #141718;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.social-icon {
+    width: 24px;
+    margin: auto 0;
+    align-self: stretch;
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+}
+
+.social-icon-large {
+    width: 50px;
+    align-self: stretch;
+    object-fit: auto;
+    object-position: center;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    max-width: 1408px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.Add-product-header {
+    justify-content: center;
+    margin-inline: 590px;
+}
+
+.Addbn img {
+    margin-right: 45px;
+}
+
+.delete {
+    position: relative;
+    bottom: 105px;
+    background-color: transparent;
+    border: none;
+    right: 22px;
+}
+
+.delete img {
+    height: 40px;
+    width: 40px;
+}
+
+#image-add {
+    background-size: cover;
+    background-position: center;
+}
+
+.Add-product-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeeee3;
+    width: 1000px;
+    height: auto;
+    border-radius: 15px;
+    align-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.Add-product-container fieldset {
+    border: none;
+}
+
+.label {
+    margin-left: 25px;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.option {
+    margin-left: 74px;
+    margin-bottom: 10px;
+}
+
+.option input {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.textArea {
+    margin-left: 75px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    margin-left: 60px;
+    padding-right: 700px;
+    margin-top: 10px;
+}
+
+.textArea #description-text {
+    margin-bottom: 20px;
+}
+
+.textArea #Additional-info-text {
+    margin-bottom: 20px;
+}
+
+.botton-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.botton-container button {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    border-color: #eeeeeee3;
+}
+
+.botton-container button[type=reset] {
+    padding-right: 25px;
+    padding-left: 25px;
+    font-weight: bold;
+}
+
+.botton-container button[type=submit] {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+.Add-img-container {
+    background-color: #eeeeeee3;
+    max-width: 1000px;
+    border-radius: 15px;
+    margin: 20px auto;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.Add-container {
+    background-color: rgba(200, 198, 198, 0.81);
+    width: 100px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    border-radius: 12px;
+    margin-right: 20px;
+    align-items: center;
+    flex: 0 0 auto;
+    overflow: hidden;
+}
+
+#productImagesContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#productImagesContainer img {
+    height: auto;
+    width: 200px; /* Adjust the width as needed */
+    height: 200px;
+    padding-right: 20px;
+    margin-right: 20px;
+}

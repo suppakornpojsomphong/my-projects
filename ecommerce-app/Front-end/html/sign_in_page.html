@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/sign_in_page2.css">
+    <title>Sign in</title>
+</head>
+
+<body>
+    <div class="allpage">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo"><a href="/web-page">asap</a></div>
+                <nav class="navigation">
+                    <a href="/web-page" class="nav-link">Home</a>
+                    <a href="/product" class="nav-link">Product</a>
+                    <a href="/team-page" class="nav-link">Team</a>
+                </nav>
+                <div class="social-icons">
+                    <nav class="nav">
+                        <a href="/search-page" class="nav-link"><img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/74d610171b49cc3b18b456fe06d02bff2a8f09126ee10249b3afcbc71e046e51?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                                alt="" class="social-icon" /></a>
+                        <a href="/signin-page" class="nav-link">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d8ac2af4fe98d3962e7216f1d3a4f909c949da16f51206d4e6f2839c71acdc86?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                                alt="" class="social-icon" />
+                        </a>
+                        <a href="#" class="nav-link"><img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f0501680077f26e72f80f48966516db3764b49ea97d0706b2943c6ac5ed015b?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                                alt="" class="social-icon-large" /></a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <div class="logo-pic">
+                <img class="logo" src="/Pictures/asap_logo.png" alt="">
+            </div>
+            <div class="signin-signup">
+                <div class="segment">
+                    <form action="http://localhost:8000/form-post" method="POST" 
+                        class="sign-in-form">
+                        <h2 class="title">Sign In</h2>
+                        <div class="form-row">
+                            <input type="text" class="form-control" name="username" id="username"
+                                placeholder="Your email address" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="password" class="form-control" name="password" id="password"
+                                placeholder="Password" required>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <button class="sign-in button" type="submit">Sign In</button>
+                    </form>
+                    <!-- Display message -->
+                    <div id="message" class="message"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

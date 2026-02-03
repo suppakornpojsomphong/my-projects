@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/product_detail.css">
+    <title>Product Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Your header content -->
+    <header>
+        <div class="header-content">
+            <div class="logo">asap</div>
+            <nav class="navigation">
+                <a href="/web-page" class="nav-link">Home</a>
+                <a href="/product" class="nav-link">Product</a>
+                <a href="/team-page" class="nav-link">Team</a>
+            </nav>
+            <div class="social-icons">
+                <nav class="nav">
+                    <a href="/search-page" class="nav-link"><img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/74d610171b49cc3b18b456fe06d02bff2a8f09126ee10249b3afcbc71e046e51?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                            alt="" class="social-icon" /></a>
+                    <a href="/signin-page" class="nav-link">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d8ac2af4fe98d3962e7216f1d3a4f909c949da16f51206d4e6f2839c71acdc86?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                            alt="" class="social-icon" />
+                    </a>
+                    <a href="#" class="nav-link"><img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f0501680077f26e72f80f48966516db3764b49ea97d0706b2943c6ac5ed015b?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                            alt="" class="social-icon-large" /></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Product details section -->
+        <div class="product-content">
+            <div class="image-part"></div>
+
+            <div class="detail-part">
+                <h1 class="product-name"></h1>
+                <div class="product-detail">
+                    <p id="prod-detail">
+                    </p>
+                    <button type="button" onclick="submitTranslate()" id="trans">TRANSLATE</button>
+                </div>
+                <!-- <p class="product-detail"></p>
+            <button type="button" onclick="submitTranslate()" id="trans">TRANSLATE</button> -->
+                <p class="product-price"></p>
+                <div class="quantity-btn">
+                    <span class="minus">-</span>
+                    <spna class="num">01</spna>
+                    <span class="plus">+</span>
+                </div>
+                <div class="addtocart">
+                    <p>Add to Cart</p>
+                </div>
+                <div class="product-info">
+                    <table>
+                        <tr>
+                            <td class="title">SKU</td>
+                            <td class="product-SKU"></td>
+                        </tr>
+                        <tr>
+                            <td class="title">CATEGORY</td>
+                            <td class="product-category"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p class="add-title">Additional Info <i id="icon" class="fa-solid fa-chevron-down"></i></p>
+                <!-- Additional Info POPUP -->
+                <p class="additional-info"></p>
+                <p class="add-title">Questions</p>
+                <p class="add-title">Reviews (127)</p>
+            </div>
+        </div>
+
+        <div class="suggestion">
+            <p class="sug-title">You might also like</p>
+            <div class="sug-product">
+                <div class="sug-img"></div>
+                <p class="sug-name"></p>
+                <p class="sug-price"></p>
+            </div>
+        </div>
+    </main>
+    <!-- Your scripts -->
+    <script src="/js/product_detail.js"></script>
+    <script>
+        // Get the SKU from the URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const sku = urlParams.get('prod_SKU');
+
+        // Call the fetchProductDetails function with the retrieved SKU
+        fetchProductDetails(sku);
+
+        // Function to fetch product details based on SKU
+        function fetchProductDetails(sku) {
+            fetch(`http://localhost:8000/product_detail?prod_SKU=${sku}`)
+                .then(response => response.json())
+                .then(product => {
+                    console.log(product);
+                    // const navCategory = document.querySelector('.nav-category');
+                    // const navName = document.querySelector('.nav-name');
+                    // Populate the product details section with the fetched data
+                    const productNameElement = document.querySelector('.product-name');
+                    const productPriceElement = document.querySelector('.product-price');
+                    const productDescriptionElement = document.getElementById('prod-detail');
+                    const productSKUElement = document.querySelector('.product-SKU');
+                    const productCategoryElement = document.querySelector('.product-category');
+                    const productImagesContainer = document.querySelector('.image-part');
+                    const productAdditionalInfo = document.querySelector('.additional-info');
+
+                    productNameElement.textContent = product.prod_name;
+                    productPriceElement.textContent = `${product.prod_price} ฿`;
+                    productDescriptionElement.textContent = product.prod_description;
+                    productSKUElement.textContent = `${product.prod_SKU}`;
+                    productCategoryElement.textContent = product.prod_category;
+                    productAdditionalInfo.textContent = product.prod_additional_info;
+
+
+                    // Loop through each product image property
+                    for (let i = 1; i <= 4; i++) {
+                        const imageUrl = product[`prod_image${i}`];
+                        if (imageUrl) {
+                            // If an image URL is available, create an image element
+                            const imgElement = document.createElement('img');
+                            imgElement.src = imageUrl;
+                            imgElement.alt = 'Product Image';
+
+                            // Create a div for each image and assign an ID
+                            const divElement = document.createElement('div');
+                            divElement.classList.add('product-img');
+                            divElement.id = `img${i}`;
+
+                            // Append the image to the div
+                            divElement.appendChild(imgElement);
+
+                            // Append the div to the productImagesContainer
+                            productImagesContainer.appendChild(divElement);
+                        } else {
+                            // If prod_image is null, create a white background div
+                            const whiteBackgroundDiv = document.createElement('div');
+                            whiteBackgroundDiv.classList.add('white-bg');
+                            whiteBackgroundDiv.style.width = '100%';
+                            whiteBackgroundDiv.style.height = '100%';
+                            whiteBackgroundDiv.style.backgroundColor = 'white';
+
+                            // Create a div for each image and assign an ID
+                            const divElement = document.createElement('div');
+                            divElement.classList.add('product-img');
+                            divElement.id = `img${i}`;
+
+                            // Append the white background div to the div
+                            divElement.appendChild(whiteBackgroundDiv);
+
+                            // Append the div to the productImagesContainer
+                            productImagesContainer.appendChild(divElement);
+                        }
+                    }
+                })
+                .catch(error => console.error('Error fetching product details:', error));
+        }
+
+        // Fetch and display suggested products
+        fetch("http://localhost:8000/suggested-products")
+            .then(response => response.json())
+            .then(products => {
+                const sugProductContainer = document.querySelector('.sug-product');
+
+                products.forEach(product => {
+                    // Create elements for each suggested product
+                    const sugBox = document.createElement('div');
+                    sugBox.classList.add('sug-box');
+                    // sugBox.href = `/product-detail?prod_SKU=${product.prod_SKU}`;
+
+                    const sugImg = document.createElement('div');
+                    sugImg.classList.add('sug-img');
+                    const imgElement = document.createElement('img');
+                    imgElement.src = product.prod_image1;
+                    imgElement.alt = 'Suggested Product Image';
+                    sugImg.appendChild(imgElement);
+
+                    const sugName = document.createElement('div');
+                    sugName.classList.add('sug-name');
+                    sugName.textContent = product.prod_name;
+
+                    const sugPrice = document.createElement('div');
+                    sugPrice.classList.add('sug-price');
+                    sugPrice.textContent = `${product.prod_price} ฿`;
+
+                    sugBox.appendChild(sugImg);
+                    sugBox.appendChild(sugName);
+                    sugBox.appendChild(sugPrice);
+
+                    sugBox.addEventListener('click', () => {
+                        // Redirect to the product detail page when the box is clicked
+                        window.location.href = `/product-detail?prod_SKU=${product.prod_SKU}`;
+                    });
+
+                    sugProductContainer.appendChild(sugBox);
+
+                    sugProductContainer.appendChild(sugBox);
+                });
+            })
+            .catch(error => console.error('Error fetching suggested products:', error));
+
+        // Function to toggle visibility of additional info, questions, and reviews sections
+        function toggleSection(section) {
+            const sectionElement = document.querySelector(`.${section}`);
+            sectionElement.classList.toggle('show');
+        }
+    </script>
+
+</body>
+
+</html>

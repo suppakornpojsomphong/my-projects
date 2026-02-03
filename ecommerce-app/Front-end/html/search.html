@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/search.css">
+    <title>Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+
+
+<body>
+    <div class="allpage">
+        <!-- START of Nav bar. -->
+        <header>
+            <div class="header-content">
+                <div class="logo"><a href="/web-page">asap</a></div>
+                <nav class="navigation">
+                    <a href="/web-page" class="nav-link">Home</a>
+                    <a href="/product" class="nav-link">Product</a>
+                    <a href="/team-page" class="nav-link">Team</a>
+                </nav>
+                <div class="social-icons">
+                    <nav class="nav">
+                        <a href="/search-page" class="nav-link"><img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/74d610171b49cc3b18b456fe06d02bff2a8f09126ee10249b3afcbc71e046e51?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                                alt="" class="social-icon" /></a>
+                        <a href="/signin-page" class="nav-link"><img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d8ac2af4fe98d3962e7216f1d3a4f909c949da16f51206d4e6f2839c71acdc86?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                                alt="" class="social-icon" /></a>
+                        <a href="#" class="nav-link"><img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f0501680077f26e72f80f48966516db3764b49ea97d0706b2943c6ac5ed015b?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                                alt="" class="social-icon-large" /></a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- END of Nav bar. -->
+        <main>
+            <div class="Search">
+                <h1>Search</h1>
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/74d610171b49cc3b18b456fe06d02bff2a8f09126ee10249b3afcbc71e046e51?apiKey=17a27039907c49e7b5a6c90c007a4cde&"
+                    alt="">
+            </div>
+            <div class=container>
+                <form action="" method="POST">
+                    <div class="search-name">
+                        <span>Name: </span>
+                        <input class="Input-Container" type="text" id="InputName" name="ProductName"
+                            placeholder="Enter product name" required>
+                    </div>
+                    <!-- START of search-category -->
+                    <div class="search-category">
+                        <span>Category: </span>
+                        <!-- START of dropdown -->
+                        <div class="dropdown">
+                            <div id="drop-text" class="dropdown-text">
+                                <p id="category"></p>
+                                <i id="icon" class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <ul id="list" class="dropdown-list" name="search_choice">
+                                <li class="dropdown-list-item" value="All Products">All Products</li>
+                                <li class="dropdown-list-item" value="GamingGear">Gaming Gear</li>
+                                <li class="dropdown-list-item" value="Accessories">Accessories</li>
+                                <li class="dropdown-list-item" value="SmartPhone">SmartPhone</li>
+                                <li class="dropdown-list-item" value="Desktop">Desktop</li>
+                                <li class="dropdown-list-item" value="Gaming Desktop">Gaming Desktop</li>
+                                <li class="dropdown-list-item" value="Computer Hardware">Computer Hardware</li>
+                            </ul>
+                        </div>
+                        <!-- END of dropdown -->
+                    </div>
+                    <!-- END of search-category -->
+
+                    <div class="search-price">
+                        <span>Price: </span>
+                        <div class="range">
+                            <input class="Input-Container" type="text" id="InputMin" name="minPrice">
+                            <p>-</p>
+                            <input class="Input-Container" type="text" id="InputMax" name="maxPrice">
+                        </div>
+                        <!-- <button type="button" class="searchBtn" id="searchBtnID"> -->
+                        <img id="searchBtnID"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/74d610171b49cc3b18b456fe06d02bff2a8f09126ee10249b3afcbc71e046e51?apiKey=17a27039907c49e7b5a6c90c007a4cde&">
+                        <!-- </button> -->
+                    </div>
+                </form>
+            </div>
+            <!-- Product list container -->
+             <div class="product-list-container">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </main>
+        <script src="/js/search.js"></script>
+</body>
+
+<script>
+    // Function to get URL parameter by name
+    function getUrlParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // const searchForm = document.querySelector('form[action="form-post"]');
+        const searchBtn = document.getElementById("searchBtnID");
+
+        searchBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const productName = document.getElementById('InputName').value;
+            const category = document.getElementById('category').innerText || 'All Products';
+            const minPrice = document.getElementById('InputMin').value;
+            const maxPrice = document.getElementById('InputMax').value;
+
+            fetchProductData(productName, category, minPrice, maxPrice);
+        });
+    });
+
+    // Function to fetch product data from the server
+    function fetchProductData(productName, category, minPrice, maxPrice) {
+        let url = 'http://localhost:8000/select';
+
+        // Adjust the URL based on provided parameters
+        const queryParams = [];
+
+        if (productName) {
+            queryParams.push(`productName=${productName}`);
+        }
+        if (category && category !== 'All Products') {
+            queryParams.push(`category=${category}`);
+        }
+        if (minPrice) {
+            queryParams.push(`minPrice=${minPrice}`);
+        }
+        if (maxPrice) {
+            queryParams.push(`maxPrice=${maxPrice}`);
+        }
+
+        if (queryParams.length > 0) {
+            url += `?${queryParams.join('&')}`;
+        }
+        console.log('Fetching data from:', url);
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const productListContainer = document.querySelector('.product-list-container');
+                productListContainer.innerHTML = '';
+
+                let row = document.createElement('div');
+                row.classList.add('Row');
+
+                data.forEach(product => {
+                    const column = document.createElement('div');
+                    column.classList.add('column');
+
+                    const imageContainer = document.createElement('div');
+                    imageContainer.classList.add('image-container');
+                    const productImage = document.createElement('img');
+                    productImage.src = product.prod_image1;
+                    productImage.alt = product.prod_name;
+                    imageContainer.appendChild(productImage);
+
+                    const productDetails = document.createElement('div');
+                    productDetails.classList.add('product-details');
+                    productDetails.innerHTML = `
+                        <h3 class="product-title">${product.prod_name}</h3>
+                        <p class="product-price">฿${product.prod_price}</p>
+                        <p class="product-description">${product.prod_description}</p>
+                    `;
+
+                    column.appendChild(imageContainer);
+                    column.appendChild(productDetails);
+
+                    column.addEventListener('click', function () {
+                        window.location.href = `/product-detail?prod_SKU=${product.prod_SKU}`;
+                    });
+
+                    row.appendChild(column);
+
+                    if (row.children.length === 2) {
+                        productListContainer.appendChild(row);
+                        row = document.createElement('div');
+                        row.classList.add('Row');
+                    }
+                });
+
+                if (row.children.length > 0) {
+                    productListContainer.appendChild(row);
+                }
+            })
+            .catch(error => console.error('Error fetching product data:', error));
+    }
+
+</script>
+
+
+</html>

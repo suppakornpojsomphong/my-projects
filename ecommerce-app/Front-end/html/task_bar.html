@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Task bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .yo {
+            display: flex;
+            flex-direction: column;
+            /* Changed to column layout */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Full viewport height */
+            background-color: #000;
+            /* Black background */
+        }
+
+        .welcome-message {
+            margin-bottom: 30px;
+            /* Added margin to separate from menu */
+        }
+
+        .welcome-message h1 {
+            font-size: 24px;
+            color: #fff;
+            /* White text */
+            text-align: center;
+            /* Center align text */
+        }
+
+        /* Rest of your existing styles remain the same */
+
+
+        .product-management-menu {
+            border-radius: 10px;
+            background-color: #fff;
+            /* White background */
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            padding: 20px 9px;
+            font-size: 20px;
+            color: #000;
+            font-weight: 400;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            /* Soft shadow */
+        }
+
+        .menu-item {
+            font-family: 'Inter', sans-serif;
+            font-feature-settings: "clig" off, "liga" off;
+            border-radius: 5px;
+            background-color: #000;
+            /* Black background */
+            color: #fff;
+            /* White text */
+            height: 40px;
+            /* Increased height for better touch targets */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px;
+            /* Adjusted padding */
+            margin-bottom: 15px;
+            /* Increased margin */
+            transition: background-color 0.3s ease;
+            /* Smooth transition */
+            text-decoration: none;
+        }
+
+        .menu-item:hover {
+            background-color: #333;
+            /* Darker background on hover */
+            color: #fff;
+            /* White text */
+        }
+
+        /* Style for the task bar */
+        .task-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px;
+            height: 50px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+        }
+
+        .task-bar-message {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your existing HTML content -->
+    <div class="yo">
+        <div class="welcome-message">
+            <h1>WELCOME TO ADMIN MANAGEMENT</h1>
+        </div>
+        <nav class="product-management-menu">
+            <a href="/product-management" class="menu-item product-management">Product Management</a>
+            <a href="/admin-manage-page" class="menu-item user-management">User Management</a>
+            <a href="/web-page" id="signOutLink" class="menu-item sign-out">Sign out</a>
+        </nav>
+    </div>
+</body>
+
+</html>

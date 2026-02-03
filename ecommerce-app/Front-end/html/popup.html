@@ -1,0 +1,43 @@
+<style>
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .popup p {
+        margin: 0;
+    }
+
+    .popup .close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+
+<div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <p>Sign in successful!</p>
+</div>
+
+
+<script>
+    function showPopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+    }
+
+    function closePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+    }
+</script>

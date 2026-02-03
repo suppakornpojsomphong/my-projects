@@ -1,0 +1,671 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>True</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>True</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Electric_Vehicle_Population_Data.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="VIN (1-10)" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="County" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="City" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="State" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Postal Code" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Model Year" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Make" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Model" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Electric Vehicle Type" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Clean Alternative Fuel Vehicle (CAFV) Eligibility" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Electric Range" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Base MSRP" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Legislative District" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="DOL Vehicle ID" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Vehicle Location" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Electric Utility" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="2020 Census Tract" size="254" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="162" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="VIN (1-10)" selected="True" />
+            <Field field="County" selected="True" />
+            <Field field="City" selected="True" />
+            <Field field="State" selected="True" />
+            <Field field="Postal Code" selected="True" />
+            <Field field="Model Year" selected="True" />
+            <Field field="Make" selected="True" />
+            <Field field="Model" selected="True" />
+            <Field field="Electric Vehicle Type" selected="True" />
+            <Field field="Clean Alternative Fuel Vehicle (CAFV) Eligibility" selected="True" />
+            <Field field="Electric Range" selected="True" />
+            <Field field="Base MSRP" selected="True" />
+            <Field field="Legislative District" selected="True" />
+            <Field field="DOL Vehicle ID" selected="True" />
+            <Field field="Vehicle Location" selected="True" />
+            <Field field="Electric Utility" selected="True" />
+            <Field field="2020 Census Tract" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="VIN (1-10)" size="10" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="String" />
+            <Field name="County" size="20" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="City" size="24" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="State" size="2" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="String" />
+            <Field name="Postal Code" size="5" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="String" />
+            <Field name="Model Year" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="Int16" />
+            <Field name="Make" size="22" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Model" size="24" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Electric Vehicle Type" size="38" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Clean Alternative Fuel Vehicle (CAFV) Eligibility" size="60" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="Electric Range" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="Int16" />
+            <Field name="Base MSRP" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="Int32" />
+            <Field name="Legislative District" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="Byte" />
+            <Field name="DOL Vehicle ID" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="Int32" />
+            <Field name="Vehicle Location" size="27" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="String" />
+            <Field name="Electric Utility" size="112" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="V_String" />
+            <Field name="2020 Census Tract" size="11" source="File: D:\ICT\4th-Year\Special Topic in DB\Dataset-Researching\EV-car-2\Electric_Vehicle_Population_Data.csv" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings>
+        <Position x="258" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"VIN (1-10)","County","City","State","Postal Code","Model Year","Make","Model","Electric Vehicle Type","Clean Alternative Fuel Vehicle (CAFV) Eligibility","Electric Range","Base MSRP","Legislative District","DOL Vehicle ID","Vehicle Location","Electric Utility","2020 Census Tract"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="378" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="VIN (1-10)" selected="False" rename="VIN" />
+            <SelectField field="Postal Code" selected="True" rename="ZIP" />
+            <SelectField field="Model Year" selected="True" rename="ModelYear" />
+            <SelectField field="Electric Vehicle Type" selected="True" rename="EV_Type" description="'BEV/PHEV'" />
+            <SelectField field="Clean Alternative Fuel Vehicle (CAFV) Eligibility" selected="True" rename="CAFV_Status" />
+            <SelectField field="Electric Range" selected="True" rename="Range_Miles" />
+            <SelectField field="Base MSRP" selected="True" rename="Base_MSRP" type="Double" size="8" />
+            <SelectField field="Legislative District" selected="True" rename="Leg_District" type="Int16" size="2" />
+            <SelectField field="DOL Vehicle ID" selected="True" rename="DOL_ID" />
+            <SelectField field="Electric Utility" selected="True" rename="Electric_Utility" />
+            <SelectField field="2020 Census Tract" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="642" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_Replace([EV_Type], &quot;.*\((.*?)\).*&quot;, &quot;$1&quot;)" field="EV_Type_short" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="IF [EV_Type_short] = &quot;BEV&quot; and [Range_Miles] = 0 &#xA;THEN Null() &#xA;ELSE [Range_Miles] &#xA;ENDIF" field="Range_Miles" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="2025-[ModelYear]" field="Vehicle_Age" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="IF [EV_Type_short] = &quot;BEV&quot;&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="BEV_Flag" size="8" type="Int64" enabled="true" />
+            <FormulaField expression="IF [EV_Type_short] = &quot;PHEV&quot;&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="PHEV_Flag" size="8" type="Int64" enabled="true" />
+            <FormulaField expression="IF [CAFV_Status] = &quot;Clean Alternative Fuel Vehicle Eligible&quot;&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="CAFV_Flag" size="8" type="Int64" enabled="true" />
+            <FormulaField expression="IF [Model] = &quot;MODEL Y&quot; THEN  44990&#xA;ELSEIF [Model] = &quot;MODEL 3&quot; THEN  38990&#xA;ELSEIF [Model] = &quot;LEAF&quot; THEN  28140&#xA;ELSEIF [Model] = &quot;MODEL S&quot; THEN  74990&#xA;ELSEIF [Model] = &quot;BOLT EV&quot; THEN  27495&#xA;ELSEIF [Model] = &quot;MODEL X&quot; THEN  79990&#xA;ELSEIF [Model] = &quot;MUSTANG MACH-E&quot; THEN  39995&#xA;ELSEIF [Model] = &quot;ID.4&quot; THEN  39735&#xA;ELSEIF [Model] = &quot;WRANGLER&quot; THEN  52590&#xA;ELSEIF [Model] = &quot;IONIQ 5&quot; THEN  41800&#xA;ELSEIF [Model] = &quot;VOLT&quot; THEN  33520&#xA;ELSEIF [Model] = &quot;R1S&quot; THEN  75900&#xA;ELSEIF [Model] = &quot;RAV4 PRIME (PHEV)&quot; THEN  42340&#xA;ELSEIF [Model] = &quot;NIRO&quot; THEN  39600&#xA;ELSEIF [Model] = &quot;PRIUS PRIME (PHEV)&quot; THEN  32350&#xA;ELSEIF [Model] = &quot;PACIFICA&quot; THEN  52360&#xA;ELSEIF [Model] = &quot;EV6&quot; THEN  42600&#xA;ELSEIF [Model] = &quot;F-150&quot; THEN  57090&#xA;ELSEIF [Model] = &quot;X5&quot; THEN  74275&#xA;ELSEIF [Model] = &quot;BOLT EUV&quot; THEN  27800&#xA;ELSEIF [Model] = &quot;R1T&quot; THEN  69900&#xA;ELSEIF [Model] = &quot;XC90&quot; THEN  71900&#xA;ELSEIF [Model] = &quot;ARIYA&quot; THEN  39590&#xA;ELSEIF [Model] = &quot;SOLTERRA&quot; THEN  44995&#xA;ELSEIF [Model] = &quot;I4&quot; THEN  52200&#xA;ELSEIF [Model] = &quot;I3&quot; THEN  44450&#xA;ELSEIF [Model] = &quot;XC60&quot; THEN  59195&#xA;ELSEIF [Model] = &quot;FUSION&quot; THEN  35000&#xA;ELSEIF [Model] = &quot;GRAND CHEROKEE&quot; THEN  62285&#xA;ELSEIF [Model] = &quot;PROLOGUE&quot; THEN  47400&#xA;ELSEIF [Model] = &quot;BZ4X&quot; THEN  42000&#xA;ELSEIF [Model] = &quot;EV9&quot; THEN  73900&#xA;ELSEIF [Model] = &quot;IX&quot; THEN  87250&#xA;ELSEIF [Model] = &quot;C-MAX&quot; THEN  27120&#xA;ELSEIF [Model] = &quot;KONA&quot; THEN  32875&#xA;ELSEIF [Model] = &quot;CYBERTRUCK&quot; THEN  99990&#xA;ELSEIF [Model] = &quot;SPORTAGE&quot; THEN  40965&#xA;ELSEIF [Model] = &quot;XC40&quot; THEN  52450&#xA;ELSEIF [Model] = &quot;PS2&quot; THEN  49800&#xA;ELSEIF [Model] = &quot;Q5 E&quot; THEN  59695&#xA;ELSEIF [Model] = &quot;EQUINOX&quot; THEN  35000&#xA;ELSEIF [Model] = &quot;LYRIQ&quot; THEN  58590&#xA;ELSEIF [Model] = &quot;BLAZER&quot; THEN  47600&#xA;ELSEIF [Model] = &quot;CX-90&quot; THEN  48820&#xA;ELSEIF [Model] = &quot;OUTLANDER&quot; THEN  39845&#xA;ELSEIF [Model] = &quot;E-TRON&quot; THEN  74800&#xA;ELSEIF [Model] = &quot;E-GOLF&quot; THEN  32790&#xA;ELSEIF [Model] = &quot;PRIUS&quot; THEN  27450&#xA;ELSEIF [Model] = &quot;EDV&quot; THEN  79900&#xA;ELSEIF [Model] = &quot;SORENTO&quot; THEN  51665&#xA;ELSEIF [Model] = &quot;TAYCAN&quot; THEN  99400&#xA;ELSEIF [Model] = &quot;CLARITY&quot; THEN  33400&#xA;ELSEIF [Model] = &quot;IONIQ 6&quot; THEN  42450&#xA;ELSEIF [Model] = &quot;HARDTOP&quot; THEN  31895&#xA;ELSEIF [Model] = &quot;500&quot; THEN  32500&#xA;ELSEIF [Model] = &quot;TUCSON&quot; THEN  37500&#xA;ELSEIF [Model] = &quot;ESCAPE&quot; THEN  41995&#xA;ELSEIF [Model] = &quot;SOUL&quot; THEN  27550&#xA;ELSEIF [Model] = &quot;EQB-CLASS&quot; THEN  53050&#xA;ELSEIF [Model] = &quot;TRANSIT&quot; THEN  51595&#xA;ELSEIF [Model] = &quot;A3&quot; THEN  39500&#xA;ELSEIF [Model] = &quot;330E&quot; THEN  46595&#xA;ELSEIF [Model] = &quot;C40&quot; THEN  53600&#xA;ELSEIF [Model] = &quot;Q8&quot; THEN  74400&#xA;ELSEIF [Model] = &quot;RZ&quot; THEN  54000&#xA;ELSEIF [Model] = &quot;AIR&quot; THEN  71400&#xA;ELSEIF [Model] = &quot;CAYENNE&quot; THEN  86500&#xA;ELSEIF [Model] = &quot;EQE-CLASS SUV&quot; THEN  77900&#xA;ELSEIF [Model] = &quot;530E&quot; THEN  57000&#xA;ELSEIF [Model] = &quot;NX&quot; THEN  60000&#xA;ELSEIF [Model] = &quot;Q4&quot; THEN  49800&#xA;ELSEIF [Model] = &quot;GLC-CLASS&quot; THEN  52000&#xA;ELSEIF [Model] = &quot;SILVERADO&quot; THEN  72905&#xA;ELSEIF [Model] = &quot;GLE-CLASS&quot; THEN  66000&#xA;ELSEIF [Model] = &quot;COUNTRYMAN&quot; THEN  45200&#xA;ELSEIF [Model] = &quot;EQS-CLASS SUV&quot; THEN  104400&#xA;ELSEIF [Model] = &quot;X3&quot; THEN  50000&#xA;ELSEIF [Model] = &quot;ZDX&quot; THEN  64500&#xA;ELSEIF [Model] = &quot;HUMMER EV SUV&quot; THEN  96550&#xA;ELSEIF [Model] = &quot;IONIQ&quot; THEN  31245&#xA;ELSEIF [Model] = &quot;GV60&quot; THEN  60900&#xA;ELSEIF [Model] = &quot;EQS-CLASS SEDAN&quot; THEN  104400&#xA;ELSEIF [Model] = &quot;SANTA FE&quot; THEN  42110&#xA;ELSEIF [Model] = &quot;I5&quot; THEN  66800&#xA;ELSEIF [Model] = &quot;HORNET&quot; THEN  42995&#xA;ELSEIF [Model] = &quot;SPARK&quot; THEN  25000&#xA;ELSEIF [Model] = &quot;MACAN&quot; THEN  75300&#xA;ELSEIF [Model] = &quot;I-PACE&quot; THEN  74500&#xA;ELSEIF [Model] = &quot;FOCUS&quot; THEN  29120&#xA;ELSEIF [Model] = &quot;EX30&quot; THEN  34950&#xA;ELSEIF [Model] = &quot;S60&quot; THEN  51250&#xA;ELSEIF [Model] = &quot;CORSAIR&quot; THEN  53000&#xA;ELSEIF [Model] = &quot;AVIATOR&quot; THEN  69190&#xA;ELSEIF [Model] = &quot;RX&quot; THEN  70080&#xA;ELSEIF [Model] = &quot;Q6&quot; THEN  63800&#xA;ELSEIF [Model] = &quot;EQE-CLASS SEDAN&quot; THEN  74900&#xA;ELSEIF [Model] = &quot;E-TRON SPORTBACK&quot; THEN  77800&#xA;ELSEIF [Model] = &quot;E-TRON GT&quot; THEN  106500&#xA;ELSEIF [Model] = &quot;POLESTAR 3&quot; THEN  73400&#xA;ELSEIF [Model] = &quot;ID. BUZZ&quot; THEN  59995&#xA;ELSEIF [Model] = &quot;PANAMERA&quot; THEN  105000&#xA;ELSEIF [Model] = &quot;OPTIQ&quot; THEN  52895&#xA;ELSEIF [Model] = &quot;Q5&quot; THEN  59695&#xA;ELSEIF [Model] = &quot;OCEAN&quot; THEN  37499&#xA;ELSEIF [Model] = &quot;FORTWO ELECTRIC DRIVE&quot; THEN  24550&#xA;ELSEIF [Model] = &quot;GV70&quot; THEN  65850&#xA;ELSEIF [Model] = &quot;CX-70&quot; THEN  40445&#xA;ELSEIF [Model] = &quot;RANGE ROVER SPORT&quot; THEN  119675&#xA;ELSEIF [Model] = &quot;EX90&quot; THEN  79995&#xA;ELSEIF [Model] = &quot;OPTIMA&quot; THEN  35000&#xA;ELSEIF [Model] = &quot;TONALE&quot; THEN  45440&#xA;ELSEIF [Model] = &quot;V60&quot; THEN  70550&#xA;ELSEIF [Model] = &quot;I8&quot; THEN  147500&#xA;ELSEIF [Model] = &quot;500E&quot; THEN  32995&#xA;ELSEIF [Model] = &quot;CROSSTREK&quot; THEN  36845&#xA;ELSEIF [Model] = &quot;HUMMER EV PICKUP&quot; THEN  96550&#xA;ELSEIF [Model] = &quot;B-CLASS&quot; THEN  42375&#xA;ELSEIF [Model] = &quot;I7&quot; THEN  105700&#xA;ELSEIF [Model] = &quot;ELR&quot; THEN  75000&#xA;ELSEIF [Model] = &quot;WAGONEER S&quot; THEN  67195&#xA;ELSEIF [Model] = &quot;SONATA&quot; THEN  35300&#xA;ELSEIF [Model] = &quot;RANGE ROVER&quot; THEN  142575&#xA;ELSEIF [Model] = &quot;RAV4&quot; THEN  29300&#xA;ELSEIF [Model] = &quot;RS E-TRON GT&quot; THEN  147100&#xA;ELSEIF [Model] = &quot;FORTWO&quot; THEN  24000&#xA;ELSEIF [Model] = &quot;IONIQ 5 N&quot; THEN  66200&#xA;ELSEIF [Model] = &quot;EQ FORTWO&quot; THEN  24000&#xA;ELSEIF [Model] = &quot;I-MIEV&quot; THEN  23845&#xA;ELSEIF [Model] = &quot;ROADSTER&quot; THEN  200000&#xA;ELSEIF [Model] = &quot;CHARGER&quot; THEN  64995&#xA;ELSEIF [Model] = &quot;S90&quot; THEN  63000&#xA;ELSEIF [Model] = &quot;S-CLASS&quot; THEN  123000&#xA;ELSEIF [Model] = &quot;EX40&quot; THEN  56445&#xA;ELSEIF [Model] = &quot;SIERRA&quot; THEN  97500&#xA;ELSEIF [Model] = &quot;ZEVO&quot; THEN  47925&#xA;ELSEIF [Model] = &quot;SQ8&quot; THEN  89800&#xA;ELSEIF [Model] = &quot;E-CLASS&quot; THEN  74000&#xA;ELSEIF [Model] = &quot;M5&quot; THEN  123275&#xA;ELSEIF [Model] = &quot;VISTIQ&quot; THEN  77395&#xA;ELSEIF [Model] = &quot;TX&quot; THEN  85000&#xA;ELSEIF [Model] = &quot;740E&quot; THEN  90095&#xA;ELSEIF [Model] = &quot;XM&quot; THEN  159995&#xA;ELSEIF [Model] = &quot;MX-30&quot; THEN  34110&#xA;ELSEIF [Model] = &quot;SQ6&quot; THEN  72900&#xA;ELSEIF [Model] = &quot;G-CLASS&quot; THEN  161500&#xA;ELSEIF [Model] = &quot;C-CLASS&quot; THEN  86050&#xA;ELSEIF [Model] = &quot;745E&quot; THEN  95000&#xA;ELSEIF [Model] = &quot;CT6&quot; THEN  75000&#xA;ELSEIF [Model] = &quot;ACCORD&quot; THEN  39780&#xA;ELSEIF [Model] = &quot;G80&quot; THEN  79825&#xA;ELSEIF [Model] = &quot;550E&quot; THEN  72000&#xA;ELSEIF [Model] = &quot;A7 E&quot; THEN  74900&#xA;ELSEIF [Model] = &quot;BRIGHTDROP&quot; THEN  47925&#xA;ELSEIF [Model] = &quot;IONIQ 9&quot; THEN  60555&#xA;ELSEIF [Model] = &quot;KARMA&quot; THEN  135000&#xA;ELSEIF [Model] = &quot;REVUELTO&quot; THEN  600000&#xA;ELSEIF [Model] = &quot;PROMASTER 3500&quot; THEN  56495&#xA;ELSEIF [Model] = &quot;ESPRINTER&quot; THEN  71900&#xA;ELSEIF [Model] = &quot;RANGER&quot; THEN  71990&#xA;ELSEIF [Model] = &quot;SPECTRE&quot; THEN  420000&#xA;ELSEIF [Model] = &quot;CITY&quot; THEN  36000&#xA;ELSEIF [Model] = &quot;745LE&quot; THEN  96000&#xA;ELSEIF [Model] = &quot;750E&quot; THEN  107000&#xA;ELSEIF [Model] = &quot;FLYING SPUR&quot; THEN  223925&#xA;ELSEIF [Model] = &quot;MIRAI&quot; THEN  49500&#xA;ELSEIF [Model] = &quot;S E-TRON GT&quot; THEN  106500&#xA;ELSEIF [Model] = &quot;TRANSIT CONNECT ELECTRIC&quot; THEN  57400&#xA;ELSEIF [Model] = &quot;A8 E&quot; THEN  96000&#xA;ELSEIF [Model] = &quot;AMG GT&quot; THEN  194900&#xA;ELSEIF [Model] = &quot;BENTAYGA&quot; THEN  205925&#xA;ELSEIF [Model] = &quot;URUS&quot; THEN  262631&#xA;ELSEIF [Model] = &quot;ONE&quot; THEN  2720000&#xA;ELSEIF [Model] = &quot;SL-CLASS&quot; THEN  200790&#xA;ELSEIF [Model] = &quot;VF 8&quot; THEN  46000&#xA;ELSEIF [Model] = &quot;WHEEGO&quot; THEN  32995&#xA;ELSEIF [Model] = &quot;918&quot; THEN  845000&#xA;ELSEIF [Model] = &quot;CONTINENTAL&quot; THEN  285000&#xA;ELSEIF [Model] = &quot;RCV&quot; THEN  83900&#xA;ELSE [Base_MSRP] = [Base_MSRP]&#xA;ENDIF" field="Base_MSRP" size="8" type="Double" enabled="true" />
+            <FormulaField expression="IF [Range_Miles] &gt;= 0 and [Range_Miles] &lt;= 40&#xA;THEN 1&#xA;ELSE 0 &#xA;ENDIF" field="Range [0-40]" size="8" type="Int64" enabled="false" />
+            <FormulaField expression="IF [Range_Miles] &gt;= 41 and [Range_Miles] &lt;= 150&#xA;THEN 1&#xA;ELSE 0 &#xA;ENDIF" field="Range [41-150]" size="8" type="Int64" enabled="false" />
+            <FormulaField expression="IF [Range_Miles] &gt;= 151 and [Range_Miles] &lt;= 250&#xA;THEN 1&#xA;ELSE 0 &#xA;ENDIF" field="Range [151-250]" size="8" type="Int64" enabled="false" />
+            <FormulaField expression="IF [Range_Miles] &gt;= 251 and [Range_Miles] &lt;= 350&#xA;THEN 1&#xA;ELSE 0 &#xA;ENDIF" field="Range [251-350]" size="8" type="Int64" enabled="false" />
+            <FormulaField expression="IF [Range_Miles] &gt;= 351&#xA;THEN 1&#xA;ELSE 0 &#xA;ENDIF" field="Range [&gt;351]" size="8" type="Int64" enabled="false" />
+            <FormulaField expression="IF [Base_MSRP] &lt;= 30000&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="MSRP [&lt;=30k]" size="8" type="Int64" enabled="false" />
+            <FormulaField expression="IF [Base_MSRP] &gt;= 30000 and [Base_MSRP] &lt;= 45000&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="MSRP [30-45k]" size="8" type="Int64" enabled="false" />
+            <FormulaField expression="IF [Base_MSRP] &gt;= 45000 and [Base_MSRP] &lt;= 60000&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="MSRP [45-60k]" size="8" type="Int64" enabled="false" />
+            <FormulaField expression="IF [Base_MSRP] &gt;= 60000 and [Base_MSRP] &lt;= 80000&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="MSRP [60-80k]" size="8" type="Int64" enabled="false" />
+            <FormulaField expression="IF [Base_MSRP] &gt;= 80000&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" field="MSRP [&gt;=80k]" size="8" type="Int64" enabled="false" />
+            <FormulaField expression="[Make] + &quot;|&quot; + [Model]" field="MakeModel_Key" size="1073741823" type="V_WString" enabled="false" />
+            <FormulaField expression="[City] + &quot;|&quot; + [County] + &quot;|&quot; + [ZIP]&#xA;" field="Geo_Key" size="1073741823" type="V_WString" enabled="false" />
+            <FormulaField expression="[ModelYear]&#xA;" field="Year_Key" size="1073741823" type="V_WString" enabled="false" />
+            <FormulaField expression="IF [ModelYear] &lt;= 2012&#xA;THEN &quot;Early&quot; &#xA;ELSEIF [ModelYear] &gt;= 2013 and [ModelYear] &lt;= 2018&#xA;THEN &quot;Growth Phase I&quot; &#xA;ELSEIF [ModelYear] &gt;= 2019 and [ModelYear] &lt;= 2021 &#xA;THEN &quot;Growth Phase II&quot; &#xA;ELSE &quot;Acceleration&quot;&#xA;ENDIF" field="Period_Bucket" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="REGEX_Replace([Location3], &quot;[()]&quot;, &quot;&quot;)&#xA;" field="Latitude" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="REGEX_Replace([Location2], &quot;[()]&quot;, &quot;&quot;)&#xA;" field="Longtitude" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="IF Contains([Electric_Utility], &quot;PACIFICORP&quot;) THEN &quot;PACIFICORP&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;PUGET SOUND ENERGY INC&quot;) THEN &quot;PUGET SOUND ENERGY INC&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;CITY OF RICHLAND - (WA)&quot;) THEN &quot;CITY OF RICHLAND - (WA)&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;CITY OF TACOMA - (WA)&quot;) THEN &quot;CITY OF TACOMA - (WA)&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;CITY OF SEATTLE - (WA)&quot;) THEN &quot;CITY OF SEATTLE - (WA)&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;CITY OF SUMAS - (WA)&quot;) THEN &quot;CITY OF SUMAS - (WA)&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;CITY OF CHENEY - (WA)&quot;) THEN &quot;CITY OF CHENEY - (WA)&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;CITY OF BLAINE - (WA)&quot;) THEN &quot;CITY OF BLAINE - (WA)&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;CITY OF CHEWELAH&quot;) THEN &quot;CITY OF CHEWELAH&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;PENINSULA LIGHT COMPANY&quot;) THEN &quot;PENINSULA LIGHT COMPANY&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;BONNEVILLE POWER ADMINISTRATION&quot;) THEN &quot;BONNEVILLE POWER ADMINISTRATION&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;PUD&quot;) THEN &quot;PUD&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;INLAND POWER &amp; LIGHT COMPANY&quot;) THEN &quot;INLAND POWER &amp; LIGHT COMPANY&quot;&#xA;&#xA;ELSE [Electric_Utility]&#xA;ENDIF" field="CompanyName" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="IF Contains([Electric_Utility], &quot;PUD&quot;) THEN &quot;PUD&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;CITY OF&quot;) THEN &quot;City&quot;&#xA;ELSEIF [Electric_Utility] = &quot;PACIFICORP&quot; OR [Electric_Utility] = &quot;PUGET SOUND ENERGY INC&quot; THEN &quot;Private&quot;&#xA;ELSEIF Contains([Electric_Utility], &quot;LIGHT COMPANY&quot;) THEN &quot;Cooperative&quot;&#xA;ELSEIF [Electric_Utility] = &quot;BONNEVILLE POWER ADMINISTRATION&quot; THEN &quot;Federal&quot;&#xA;ELSE &quot;Other&quot;&#xA;ENDIF&#xA;" field="Utility_Type" size="1073741823" type="V_WString" enabled="false" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>EV_Type_short = REGEX_Replace([EV_Type], ".*\((.*?)\).*", "$1")
+Range_Miles = IF...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1110" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\SUPPAK~1\AppData\Local\Temp\Alteryx\Engine_25752_21d4d0e65ea5448c85fc238b62e824f0_\Engine_25752_f9a4e2338b644a65ae93b64f82e19b71~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="822" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[([ModelYear] >= 2008 and [ModelYear] < 2025)
+and ([EV_Type_short] = "BEV" or [EV_Type_short] = "PHEV")
+and [State] = "WA"
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>([ModelYear] &gt;= 2008 and [ModelYear] &lt; 2025)
+and ([EV_Type_short] = "BEV" or [EV...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="1014" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="DOL_ID" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1122" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="VIN" selected="False" />
+            <SelectField field="DOL_ID" selected="True" />
+            <SelectField field="County" selected="True" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="State" selected="True" />
+            <SelectField field="ZIP" selected="True" />
+            <SelectField field="Latitude" selected="True" />
+            <SelectField field="Longtitude" selected="True" />
+            <SelectField field="ModelYear" selected="True" />
+            <SelectField field="Make" selected="True" />
+            <SelectField field="Model" selected="True" />
+            <SelectField field="EV_Type" selected="False" />
+            <SelectField field="EV_Type_short" selected="True" />
+            <SelectField field="CAFV_Status" selected="True" />
+            <SelectField field="Range_Miles" selected="True" />
+            <SelectField field="Base_MSRP" selected="True" />
+            <SelectField field="Leg_District" selected="False" />
+            <SelectField field="Vehicle Location" selected="False" />
+            <SelectField field="CompanyName" selected="True" />
+            <SelectField field="Utility_Type" selected="True" />
+            <SelectField field="Electric_Utility" selected="True" />
+            <SelectField field="2020 Census Tract" selected="False" />
+            <SelectField field="Location1" selected="False" />
+            <SelectField field="Location2" selected="False" />
+            <SelectField field="Location3" selected="False" />
+            <SelectField field="CAFV_Status_short" selected="False" />
+            <SelectField field="Vehicle_Age" selected="True" />
+            <SelectField field="BEV_Flag" selected="True" />
+            <SelectField field="PHEV_Flag" selected="True" />
+            <SelectField field="CAFV_Flag" selected="True" />
+            <SelectField field="Range [0-40]" selected="False" />
+            <SelectField field="Range [41-150]" selected="False" />
+            <SelectField field="Range [151-250]" selected="False" />
+            <SelectField field="Range [251-350]" selected="False" />
+            <SelectField field="Range [&gt;351]" selected="False" />
+            <SelectField field="MSRP [&lt;=30k]" selected="False" />
+            <SelectField field="MSRP [30-45k]" selected="False" />
+            <SelectField field="MSRP [45-60k]" selected="False" />
+            <SelectField field="MSRP [60-80k]" selected="False" />
+            <SelectField field="MSRP [&gt;=80k]" selected="False" />
+            <SelectField field="MakeModel_Key" selected="False" />
+            <SelectField field="Geo_Key" selected="False" />
+            <SelectField field="Year_Key" selected="False" />
+            <SelectField field="Period_Bucket" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1242" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">D:\ICT\4th-Year\Special Topic in DB\Project1\Dataset\EV_clean.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>EV_clean.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="474" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Vehicle Location</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>Location</RootName>
+          <Delimeters value=" " />
+          <NumFields value="3" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1218" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\SUPPAK~1\AppData\Local\Temp\Alteryx\Engine_25752_21d4d0e65ea5448c85fc238b62e824f0_\Engine_25752_b354a39ed5ea4e619d5ec9e6b9390061~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="726" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\SUPPAK~1\AppData\Local\Temp\Alteryx\Engine_25752_21d4d0e65ea5448c85fc238b62e824f0_\Engine_25752_0e0ba578b4784d1fad24d3466f273cb6~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="366" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\SUPPAK~1\AppData\Local\Temp\Alteryx\Engine_25752_21d4d0e65ea5448c85fc238b62e824f0_\Engine_25752_fcb5775395414ff3b2df0bdaf902ea3d~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1122" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\SUPPAK~1\AppData\Local\Temp\Alteryx\Engine_25752_21d4d0e65ea5448c85fc238b62e824f0_\Engine_25752_0978acd1566d4312981f002962c06705~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="90" y="138" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>E</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="534" y="114" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>T</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1206" y="246" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>L</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output26" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output26" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="True" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Unique" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Unique" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Duplicates" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>1_BEANNS_Alteryx</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="442b96a1-21e9-41f0-afcd-890ffab96f78" />
+      <Telemetry>
+        <PreviousWorkflowId value="4c3140e9-414e-46ef-8c2c-2f3c798246a2" />
+        <OriginWorkflowId value="45fac024-64c7-48e9-8ff9-29de242e2af9" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
